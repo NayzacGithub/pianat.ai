@@ -78,7 +78,7 @@ class ProcessMakerServiceProvider extends ServiceProvider
     public function register()
     {
         // Dusk, if env is appropriate
-        if(!$this->app->environment('production')) {
+        if(!$this->app->environment('production') && !$this->app->environment('local')) {
             $this->app->register(\Laravel\Dusk\DuskServiceProvider::class);
         }
 

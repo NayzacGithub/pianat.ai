@@ -28,6 +28,5 @@
 		"allowOrigin": "",
 		"allowMethods": "",
 		"allowHeaders": ""
-	},
-	"port":8080
+	}
 }

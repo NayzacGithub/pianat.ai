@@ -23,6 +23,7 @@ class GenerateMenus
             $menu->group(['prefix' => 'requests'], function ($request_items) {
                 $request_items->add(__('Requests'), ['route' => 'requests.index'])->active('requests/*');
             });
+            // dd($menu->items[0]->link->path->route);
             //@TODO change the index to the correct blade
             $menu->group(['prefix' => 'tasks'], function ($request_items) {
                 $request_items->add(__('Tasks'), ['route' => 'tasks.index'])->active('tasks/*');
@@ -247,6 +248,7 @@ class GenerateMenus
                 }
             }
         });
+        
         return $next($request);
     }
 }

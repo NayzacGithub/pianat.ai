@@ -1,49 +1,49 @@
 <template>
-  <div class="card-deck-flex">
+  <div class="row g-3 mb-3">
     <slot></slot>
   </div>
 </template>
 
 <script>
-  import CounterCard from "./CounterCard";
+import CounterCard from "./CounterCard";
 
-  export default {
-    components: { CounterCard },
-    mounted() {
-      this.retrieveCounts();
+export default {
+  components: { CounterCard },
+  mounted() {
+    this.retrieveCounts();
+  },
+  computed: {
+    cards() {
+      return this.$children.filter(child => {
+        return child.$options._componentTag == 'counter-card';
+      });
     },
-    computed: {
-      cards() {
-        return this.$children.filter(child => {
-          return child.$options._componentTag == 'counter-card';
-        });
-      },
-    },
-    methods: {
-      retrieveCounts() {
-        let requests = [];
-        
-        this.cards.forEach(card => {
-          requests.push(ProcessMaker.apiClient.get(card.url));
-        });
-        
-        ProcessMaker.apiClient.all(requests)
-          .then(ProcessMaker.apiClient.spread((...responses) => {
-            responses.forEach(response => {
-              this.getCard(response.config.url).setCount(response.data.meta.total);
-            });
-          }))
-          .catch(errors => {
-            this.cards.forEach(card => {
-              card.show();
-            });
+  },
+  methods: {
+    retrieveCounts() {
+      let requests = [];
+
+      this.cards.forEach(card => {
+        requests.push(ProcessMaker.apiClient.get(card.url));
+      });
+
+      ProcessMaker.apiClient.all(requests)
+        .then(ProcessMaker.apiClient.spread((...responses) => {
+          responses.forEach(response => {
+            this.getCard(response.config.url).setCount(response.data.meta.total);
           });
-      },
-      getCard(url) {
-        return this.cards.find(card => {
-          return card.url == url;
+        }))
+        .catch(errors => {
+          this.cards.forEach(card => {
+            card.show();
+          });
         });
-      },
-    }
+    },
+    getCard(url) {
+      return this.cards.find(card => {
+        return card.url == url;
+      });
+    },
   }
+}
 </script>
