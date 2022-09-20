@@ -1,6 +1,6 @@
 <template>
     <div class="data-table">
-        <div class="card card-body table-card">
+        <div class="">
             <vuetable :dataManager="dataManager" :sortOrder="sortOrder" :css="css" :api-mode="false"
                       :per-page="10" :fields="fields" :data="data" data-path="data"
                       @vuetable:pagination-data="onPaginationData" pagination-path="meta">

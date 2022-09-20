@@ -1,7 +1,7 @@
 <template>
   <div class="settings-listing data-table">
     <basic-search class="mb-3" @submit="onSearch"></basic-search>
-    <div class="card card-body table-card">
+    <div class="">
       <b-table
         class="settings-table table table-responsive-lg text-break m-0 h-100 w-100"
         :current-page="currentPage"

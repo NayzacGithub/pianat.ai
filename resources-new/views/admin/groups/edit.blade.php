@@ -80,7 +80,7 @@
                     </div>
                     <div class="card card-body border-top-0 tab-pane p-3" id="nav-users" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div id="search-bar" class="search mb-3" vcloak>
-                            <div class="d-flex flex-column flex-md-row">
+                            <div class="d-flex flex-column flex-md-row gap-1">
                                 <div class="flex-grow-1">
                                     <div id="search" class="mb-3 mb-md-0">
                                         <div class="input-group w-100">
@@ -103,7 +103,7 @@
                     </div>
                     <div class="card card-body border-top-0 tab-pane p-3" id="nav-groups" role="tabpanel" aria-labelledby="nav-profile-tab">
                         <div id="search-bar" class="search mb-3" vcloak>
-                            <div class="d-flex flex-column flex-md-row">
+                            <div class="d-flex flex-column flex-md-row gap-1">
                                 <div class="flex-grow-1">
                                     <div id="search" class="mb-3 mb-md-0">
                                         <div class="input-group w-100">

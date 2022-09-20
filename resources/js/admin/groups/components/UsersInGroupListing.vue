@@ -1,6 +1,6 @@
 <template>
     <div class="data-table">
-        <div class="card card-body table-card">
+        <div class="">
             <vuetable
                     :dataManager="dataManager"
                     :sortOrder="sortOrder"

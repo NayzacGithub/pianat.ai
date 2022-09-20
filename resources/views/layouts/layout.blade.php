@@ -90,6 +90,7 @@
             @yield('sidebar')
             <div class="content">
                 @include('layouts.navbar')
+
                 @yield('content')
             </div>
         </div>

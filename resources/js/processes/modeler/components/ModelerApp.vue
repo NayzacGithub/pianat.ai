@@ -1,38 +1,27 @@
 <template>
-  <b-container id="modeler-app" class="container p-0">
-    <b-card no-body class="h-100 border-top-0">
-      <b-card-body class="overflow-hidden position-relative p-0 vh-100" data-test="body-container">
-        <modeler
-          ref="modeler"
-          :owner="self"
-          :decorations="decorations"
-          @validate="validationErrors = $event"
-          @warnings="warnings = $event"
-          @saveBpmn="emitRegisteredEvents"
-          @set-xml-manager="xmlManager = $event"
-        />
-      </b-card-body>
 
-      <validation-status
-        ref="validationStatus"
-        :validation-errors="validationErrors"
-        :warnings="warnings"
-        :owner="self"
-        :xml-manager="xmlManager"
-      >
-        <component v-for="(component, index) in validationBar" :key="`validation-status-${index}`" :is="component" :owner="self" />
-      </validation-status>
+  <b-card no-body class="h-100 border-top-0">
+    <b-card-body class="overflow-hidden position-relative p-0 vh-100" data-test="body-container">
+      <modeler ref="modeler" :owner="self" :decorations="decorations" @validate="validationErrors = $event"
+        @warnings="warnings = $event" @saveBpmn="emitRegisteredEvents" @set-xml-manager="xmlManager = $event" />
+    </b-card-body>
 
-      <component v-for="(component, index) in external" :key="`external-${index}`" :is="component.type" :options="component.options"/>
+    <validation-status ref="validationStatus" :validation-errors="validationErrors" :warnings="warnings" :owner="self"
+      :xml-manager="xmlManager">
+      <component v-for="(component, index) in validationBar" :key="`validation-status-${index}`" :is="component"
+        :owner="self" />
+    </validation-status>
 
-    </b-card>
-  </b-container>
+    <component v-for="(component, index) in external" :key="`external-${index}`" :is="component.type"
+      :options="component.options" />
+
+  </b-card>
 </template>
 
 <script>
-  import {Modeler, ValidationStatus} from "@processmaker/modeler";
+import { Modeler, ValidationStatus } from "@processmaker/modeler";
 
-  export default {
+export default {
   name: 'ModelerApp',
   components: {
     Modeler,
@@ -43,7 +32,7 @@
       self: this,
       validationBar: [],
       external: [],
-      externalEmit : [],
+      externalEmit: [],
       dataXmlSvg: {},
       decorations: {
         borderOutline: {},
@@ -58,7 +47,7 @@
     updateBpmnValidations() {
       const statusBar = this.$refs.validationStatus;
       const warnings = this.warnings;
-      if(warnings instanceof Array) {
+      if (warnings instanceof Array) {
         const bpmnWarnings = [];
         warnings.forEach((warning) => {
           if (warning.errors instanceof Object) {
@@ -91,7 +80,7 @@
     },
     getTaskNotifications() {
       var notifications = {};
-      this.$refs.modeler.nodes.forEach(function(node) {
+      this.$refs.modeler.nodes.forEach(function (node) {
         let id = node.definition.id;
         if (node.notifications !== undefined) {
           notifications[id] = node.notifications;
@@ -99,7 +88,7 @@
       });
       return notifications;
     },
-    emitRegisteredEvents ({xml, svg}) {
+    emitRegisteredEvents({ xml, svg }) {
       this.dataXmlSvg.xml = xml;
       this.dataXmlSvg.svg = svg;
 
@@ -144,8 +133,8 @@
       };
 
       ProcessMaker.apiClient.put('/processes/' + this.process.id, data)
-              .then(savedSuccessfully)
-              .catch(saveFailed);
+        .then(savedSuccessfully)
+        .catch(saveFailed);
     }
   },
   mounted() {

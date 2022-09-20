@@ -1,6 +1,6 @@
     <div class="page-content mb-0" id="screenIndex">
         <div id="search-bar" class="search mb-3" vcloak>
-            <div class="d-flex flex-column flex-md-row">
+            <div class="d-flex flex-column flex-md-row gap-1">
                 <div class="flex-grow-1">
                     <div id="search" class="mb-3 mb-md-0">
                         <div class="input-group w-100">
@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 @canany(['import-screens', 'create-screens'])
-                    <div class="d-flex ml-md-0 flex-column flex-md-row">
+                    <div class="d-flex ml-md-0 flex-column flex-md-row gap-1">
                         @can('import-screens')
                             <div class="mb-3 mb-md-0 ml-md-2">
                                 <a href="#"  aria-label="{{ __('Import Screen') }}" class="btn btn-outline-secondary w-100" @click="goToImport">

@@ -15,7 +15,7 @@
     ]])
 @endsection
 @section('content')
-    <div class="px-3 page-content mb-0" id="tasks">
+    <div class="page-content mb-0" id="tasks">
         <div class="row">
             <div class="col" align="right">
                 <b-alert class="align-middle" show variant="danger" v-cloak v-if="inOverdueMessage.length>0"

@@ -7,7 +7,7 @@
             :empty-desc="$t('')"
             empty-icon="noData"
     />
-    <div v-show="!shouldShowLoader" class="card card-body table-card" data-cy="screens-table">
+    <div v-show="!shouldShowLoader" class="" data-cy="screens-table">
       <vuetable
         :dataManager="dataManager"
         :noDataTemplate="$t('No Data Available')"

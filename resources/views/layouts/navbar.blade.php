@@ -1,12 +1,8 @@
-<nav class="navbar navbar-light navbar-glass navbar-top navbar-expand">
+<nav class="navbar navbar-light navbar-glass navbar-top navbar-expand" id="navbar">
     <button class="btn navbar-toggler-humburger-icon navbar-toggler me-1 me-sm-3" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarVerticalCollapse" aria-controls="navbarVerticalCollapse" aria-expanded="false"
         aria-label="Toggle Navigation"><span class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
-    <a class="navbar-brand me-1 me-sm-3" href="index.html">
-        <div class="d-flex align-items-center"><img class="me-2" src="assets/img/icons/spot-illustrations/falcon.png"
-                alt="" width="40" /><span class="font-sans-serif">falcon</span>
-        </div>
-    </a>
+
     <ul class="navbar-nav align-items-center d-none d-lg-block">
         <li class="nav-item">
             <div class="search-box" data-list='{"valueNames":["title"]}'>
@@ -64,69 +60,9 @@
                             </div>
                         </a>
 
-                        <hr class="text-200 dark__text-900" />
-                        <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Files</h6><a
-                            class="dropdown-item px-card py-2" href="#!">
-                            <div class="d-flex align-items-center">
-                                <div class="file-thumbnail me-2"><img class="border h-100 w-100 fit-cover rounded-3"
-                                        src="assets/img/products/3-thumb.png" alt="" /></div>
-                                <div class="flex-1">
-                                    <h6 class="mb-0 title">iPhone</h6>
-                                    <p class="fs--2 mb-0 d-flex"><span class="fw-semi-bold">Antony</span><span
-                                            class="fw-medium text-600 ms-2">27 Sep at 10:30 AM</span></p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item px-card py-2" href="#!">
-                            <div class="d-flex align-items-center">
-                                <div class="file-thumbnail me-2"><img class="img-fluid" src="assets/img/icons/zip.png"
-                                        alt="" /></div>
-                                <div class="flex-1">
-                                    <h6 class="mb-0 title">Falcon v1.8.2</h6>
-                                    <p class="fs--2 mb-0 d-flex"><span class="fw-semi-bold">John</span><span
-                                            class="fw-medium text-600 ms-2">30 Sep at 12:30 PM</span></p>
-                                </div>
-                            </div>
-                        </a>
 
                         <hr class="text-200 dark__text-900" />
-                        <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Members</h6><a
-                            class="dropdown-item px-card py-2" href="pages/user/profile.html">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar avatar-l status-online me-2">
-                                    <img class="rounded-circle" src="assets/img/team/1.jpg" alt="" />
-
-                                </div>
-                                <div class="flex-1">
-                                    <h6 class="mb-0 title">Anna Karinina</h6>
-                                    <p class="fs--2 mb-0 d-flex">Technext Limited</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item px-card py-2" href="pages/user/profile.html">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar avatar-l me-2">
-                                    <img class="rounded-circle" src="assets/img/team/2.jpg" alt="" />
-
-                                </div>
-                                <div class="flex-1">
-                                    <h6 class="mb-0 title">Antony Hopkins</h6>
-                                    <p class="fs--2 mb-0 d-flex">Brain Trust</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a class="dropdown-item px-card py-2" href="pages/user/profile.html">
-                            <div class="d-flex align-items-center">
-                                <div class="avatar avatar-l me-2">
-                                    <img class="rounded-circle" src="assets/img/team/3.jpg" alt="" />
-
-                                </div>
-                                <div class="flex-1">
-                                    <h6 class="mb-0 title">Emma Watson</h6>
-                                    <p class="fs--2 mb-0 d-flex">Google</p>
-                                </div>
-                            </div>
-                        </a>
+                        <h6 class="dropdown-header fw-medium text-uppercase px-card fs--2 pt-0 pb-2">Members</h6>
 
                     </div>
                     <div class="text-center mt-n3">
@@ -143,7 +79,7 @@
                 id="navbarDropdownNotification" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false" data-hide-on-body-scroll="data-hide-on-body-scroll"><span class="fas fa-bell"
                     data-fa-transform="shrink-6" style="font-size: 33px;"></span></a>
-            <div class="dropdown-menu dropdown-caret dropdown-caret dropdown-menu-end dropdown-menu-card dropdown-menu-notification dropdown-caret-bg"
+            {{-- <div class="dropdown-menu dropdown-caret dropdown-caret dropdown-menu-end dropdown-menu-card dropdown-menu-notification dropdown-caret-bg"
                 aria-labelledby="navbarDropdownNotification">
                 <div class="card card-notification shadow-none">
                     <div class="card-header">
@@ -258,7 +194,7 @@
                     <div class="card-footer text-center border-top"><a class="card-link d-block"
                             href="app/social/notifications.html">View all</a></div>
                 </div>
-            </div>
+            </div> --}}
 
         </li>
 

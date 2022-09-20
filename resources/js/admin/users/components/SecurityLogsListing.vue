@@ -2,7 +2,7 @@
   <div>
     <basic-search class="mb-3" v-model="query" @submit="runSearch"></basic-search>
     <div class="data-table">
-      <div class="card card-body table-card">
+      <div class="">
         <vuetable
          :dataManager="dataManager"
          :sortOrder="sortOrder"

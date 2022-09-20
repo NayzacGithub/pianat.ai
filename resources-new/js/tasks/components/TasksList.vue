@@ -7,7 +7,7 @@
       :empty-desc="$t('You don\'t currently have any tasks assigned to you')"
       empty-icon="beach"
     />
-    <div v-show="!shouldShowLoader" class="card card-body table-card" data-cy="tasks-table">
+    <div v-show="!shouldShowLoader" class="" data-cy="tasks-table">
       <vuetable
         :dataManager="dataManager"
         :sortOrder="sortOrder"

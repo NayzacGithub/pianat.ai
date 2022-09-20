@@ -19,7 +19,7 @@
     ])
 @endsection
 @section('content')
-    <div class="px-3 page-content mb-0" id="requests-listing">
+    <div class="page-content mb-0" id="requests-listing">
         <div class="row">
             <div class="col-sm-12">
                 <counter-card-group>

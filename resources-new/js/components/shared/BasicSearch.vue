@@ -1,6 +1,6 @@
 <template>
     <div class="basic-search">
-        <div class="d-flex flex-column flex-md-row">
+        <div class="d-flex flex-column flex-md-row gap-1">
             <div class="flex-grow-1">
                 <div class="search-bar-basic d-flex w-100">
                     <div class="search-bar-inputs flex-grow w-100 mb-3 mb-md-0">

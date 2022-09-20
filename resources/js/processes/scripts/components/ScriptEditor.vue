@@ -5,7 +5,7 @@
 
       <b-card-body class="overflow-hidden p-4" ref="editorContainer">
         <b-row class="h-100">
-          <b-col cols="9" class="h-100 p-0">
+          <b-col cols="9" class="vh-25 p-0">
             <monaco-editor
               :options="monacoOptions"
               v-model="code"

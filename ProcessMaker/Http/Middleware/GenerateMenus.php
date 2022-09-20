@@ -22,6 +22,7 @@ class GenerateMenus
         Menu::make('topnav', function ($menu) {
             $menu->group(['prefix' => 'requests'], function ($request_items) {
                 $request_items->add(__('Requests'), ['route' => 'requests.index'])->active('requests/*');
+                
             });
             // dd($menu->items[0]->link->path->route);
             //@TODO change the index to the correct blade
@@ -110,7 +111,7 @@ class GenerateMenus
             ]);
         });
         Menu::make('sidebar_request', function ($menu) {
-            $submenu = $menu->add(__('Request'));
+            $submenu = $menu->add(__('Requests'));
             $submenu->add(__('My Requests'), [
                 'route' => ['requests_by_type', ''],
                 'icon' => 'fa-id-badge',

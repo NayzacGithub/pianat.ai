@@ -28,7 +28,7 @@
 @endsection
 @section('content')
     <div v-cloak id="task" class="container-fluid px-3">
-        <div class="d-flex flex-column flex-md-row">
+        <div class="d-flex flex-column flex-md-row gap-1">
             <div class="flex-grow-1">
                 <div v-if="isSelfService" class="alert alert-primary" role="alert">
                     <button type="button" class="btn btn-primary" @click="claimTask">{{__('Claim Task')}}</button>
