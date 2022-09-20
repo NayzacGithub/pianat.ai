@@ -1,0 +1,214 @@
+#mainHeader {
+  border-bottom: solid 1px #d8d8d8;
+}
+
+#mainFooter {
+  border-top: solid 1px #d8d8d8;
+}
+
+.card {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+}
+
+.card .card-header {
+  padding: 1rem 1.25rem;
+  font-size: 1.3rem;
+}
+
+.modal .modal-header {
+  background: #fff;
+}
+
+.modal .modal-content {
+  background: #fafafa;
+}
+
+#mainSidebar a {
+  color: #495057;
+  padding: 0.5rem 0;
+}
+
+#mainSidebar svg {
+  fill: #adb5bd;
+}
+
+#mainSidebar li.active a {
+  color: #9013FE;
+}
+
+#mainSidebar li.active svg {
+  fill: #9013FE;
+}
+
+#mainSidebar i {
+  display: inline-flex;
+  align-self: center;
+  position: relative;
+  height: 1em;
+  width: 0.4em;
+  margin-right: 1.5rem;
+}
+
+#mainSidebar i svg {
+  bottom: -0.3em;
+  position: absolute;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.stats {
+  overflow: hidden;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.stats .stat {
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d8d8d8;
+}
+
+.stats .stat .stat-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #495057;
+}
+
+.stats .stat .stat-value {
+  font-size: 1.4rem;
+}
+
+.stats .stat .stat-meta {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.statusIcon > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-sm > svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.fill-white {
+  fill: #fff;
+}
+
+.fill-primary {
+  fill: #9013FE;
+}
+
+.fill-success {
+  fill: #00BF9C;
+}
+
+.fill-danger {
+  fill: #ED4757;
+}
+
+.fill-warning {
+  fill: #FBBE02;
+}
+
+.card-table {
+  margin: 0;
+}
+
+.card-table tr:first-child td {
+  border: 0;
+}
+
+.card-table th {
+  background-color: #ebecee;
+  vertical-align: middle;
+  font-weight: normal;
+  padding: 0.5rem 1.25rem;
+  border: 0;
+}
+
+.card-table td {
+  padding: 1.25rem;
+  vertical-align: middle;
+}
+
+.card-tabs {
+  padding: 0 1.25rem;
+}
+
+.card-tabs .nav-item {
+  margin-right: 1.5rem;
+}
+
+.card-tabs .nav-link {
+  border: 0;
+  color: #495057;
+  padding: 0.8rem 0;
+}
+
+.card-tabs .nav-link.active {
+  background-color: transparent;
+  color: #9013FE;
+  border-bottom: solid 2px #9013FE;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+.exceptionDisplay span {
+  margin-bottom: 5px;
+  display: block;
+  background: #efefef;
+  padding: 1px 3px;
+}
+
+.jobDetailsText {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+.jobDetailsText span,
+.jobDetailsText pre {
+  margin-bottom: 5px;
+  display: block;
+  background: #efefef;
+  padding: 1px 3px;
+}
+
